@@ -9,9 +9,8 @@ const App = () => {
       {/* <FunctionsComponents />
       <Counter /> */}
       {/* <DataFetch /> */}
-      {/* qaldi
-      <FilterUsers /> */}
-      
+      {/* qaldi*/}
+       <FilterUsers />
     </div>
   );
 };
