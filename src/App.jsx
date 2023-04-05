@@ -1,18 +1,21 @@
-import FunctionsComponents from "./tasks/task2/FunctionsComponents";
-import DataFetch from "./tasks/task3/DataFetch";
-import Counter from "./tasks/task4/Counter";
-import FilterUsers from "./tasks/task5/FilterUsers";
-
+import { useEffect, useState } from "react";
+import { MainContext } from "./context";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 const App = () => {
+  const [theme, setTheme] = useState("light");
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+  const data = {
+    theme,
+    setTheme,
+  };
   return (
-    <div>
-      {/* <FunctionsComponents />
-      <Counter /> */}
-      {/* <DataFetch /> */}
-      {/* qaldi
-      <FilterUsers /> */}
-      
-    </div>
+    <MainContext.Provider value={data}>
+      <Header />
+      <Footer />
+    </MainContext.Provider>
   );
 };
 export default App;
