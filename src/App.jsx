@@ -1,9 +1,4 @@
-import ItemList from "./components/ItemList";
-import Users from "./components/User";
-import FunctionsComponents from "./tasks/task2/FunctionsComponents";
-import DataFetch from "./tasks/task3/DataFetch";
-import Counter from "./tasks/task4/Counter";
-import FilterUsers from "./tasks/task5/FilterUsers";
+import FilterUsers from "./FilterUsers";
 
 const App = () => {
   return (
@@ -11,9 +6,9 @@ const App = () => {
       {/* <FunctionsComponents />
       <Counter /> */}
       {/* <DataFetch /> */}
-      {/* <FilterUsers /> */}
+      <FilterUsers />
       {/* <ItemList /> */}
-      <Users/>
+      {/* <Users/> */}
     </div>
   );
 };
