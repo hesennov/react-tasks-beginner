@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 import "./App.css";
-import project1 from "./assets/project1.jpg";
-import project2 from "./assets/project2.jpg";
-import project3 from "./assets/project3.jpg";
-import Footerr from "./Footerr";
+import htmlLogo from "./assets/htmlLogo.png";
+import cssLogo from "./assets/cssLogo.png";
+import reactLogo from "./assets/reactLogo.jpg";
+import jsLogo from "./assets/jsLogo.png";
+import nodeLogo from "./assets/nodeLogo.png";
+import "./style.css";
 
 const variants = {
   initial: {
@@ -102,7 +104,39 @@ function Hesennov() {
             </ul>
           </nav>
         </header>
-
+        <main>
+          <section className="hero">
+            <motion.h1
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              Hi, I'm Həsən Həsənov
+            </motion.h1>
+            <motion.p
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.2, duration: 0.5 }}
+            >
+              A Front-End Developer
+            </motion.p>
+            <button>Get in touch</button>
+          </section>
+          <section className="technologies">
+            <h2>Technologies I Work With</h2>
+            <div className="tech-icons">
+              <img src={htmlLogo} alt="HTML Logo" />
+              <img src={cssLogo} alt="CSS Logo" />
+              <img src={jsLogo} alt="JavaScript Logo" />
+              <img src={reactLogo} alt="React Logo" />
+              <img src={nodeLogo} alt="Node.js Logo" />
+            </div>
+          </section>
+          <section className="blog">
+            <h2>Latest Blog Posts</h2>
+            <div className="blog-posts">{/* Blog post items go here */}</div>
+          </section>
+        </main>
         <section id="about">
           <div className="about-container">
             <motion.h2
