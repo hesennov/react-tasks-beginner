@@ -1,6 +1,12 @@
+import Footerr from "./Footerr";
+import Hesennov from "./Hesennov";
+
 const App = () => {
   return (
-    <div>App</div>
-  )
-}
-export default App
+    <div>
+      <Hesennov />
+      <Footerr/>
+    </div>
+  );
+};
+export default App;
