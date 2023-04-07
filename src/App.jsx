@@ -99,7 +99,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Button onClick={onAddStudent}>Add a new Student</Button>
+        <Button onClick={onAddStudent}>Yeni data yarata</Button>
         <Table columns={columns} dataSource={dataSource}></Table>
         <Modal
           title="Edit Student"
