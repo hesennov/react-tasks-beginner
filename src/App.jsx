@@ -1,14 +1,25 @@
 // import  * from "antd/dist/antd.css";
 import "./App.css";
 import { Button, Table, Modal, Input } from "antd";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { EditOutlined, DeleteOutlined } from "@ant-design/icons";
+import axios from "axios";
 
 function App() {
   const [isEditing, setIsEditing] = useState(false);
   const [editingStudent, setEditingStudent] = useState(null);
-  const [dataSource, setDataSource] = useState()
-  
+  const [dataSource, setDataSource] = useState();
+
+  useEffect(() => {
+    const fetch = () => {
+      axios
+        .get("https://jsonplaceholder.typicode.com/users")
+        .then((res) => setDataSource(res.data))
+        .catch((err) => console.log(err));
+    };
+    fetch();
+  }, []);
+
   const columns = [
     {
       key: "1",
@@ -22,13 +33,13 @@ function App() {
     },
     {
       key: "3",
-      title: "Email",
-      dataIndex: "email",
+      title: "usename",
+      dataIndex: "username",
     },
     {
       key: "4",
-      title: "Address",
-      dataIndex: "address",
+      title: "email",
+      dataIndex: "email",
     },
     {
       key: "5",
